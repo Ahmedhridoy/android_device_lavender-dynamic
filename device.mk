@@ -466,6 +466,10 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
+    
+# NotchBarKiller
+PRODUCT_PACKAGES += \
+    NotchBarKiller
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
