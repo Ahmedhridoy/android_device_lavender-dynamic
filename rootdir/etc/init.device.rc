@@ -81,7 +81,7 @@ on boot
     setprop persist.camera.gyro.disable 0
 
     # Use SDM636 powerhint config
-    setprop vendor.powerhal.config "powerhint_636.json"
+    setprop vendor.powerhal.config "powerhint_660.json"
 
 on post-fs-data
     mkdir /persist/qti_fp 0700 system system
