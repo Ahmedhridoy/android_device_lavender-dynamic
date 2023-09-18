@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE=whyred
+export DEVICE=lavender
 export VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
@@ -32,15 +32,6 @@ write_headers "${DEVICE}"
 
 # The standard device blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
-write_makefiles "${MY_DIR}/proprietary-files-whyred.txt" true
-
-printf "\n%s\n" "ifeq (\$(BOARD_HAVE_QCOM_FM),true)" >> "${PRODUCTMK}"
-write_makefiles "${MY_DIR}/proprietary-files-fm.txt" true
-echo "endif" >> "${PRODUCTMK}"
-
-printf "\n%s\n" "ifeq (\$(BOARD_HAVE_IR),true)" >> "${PRODUCTMK}"
-write_makefiles "${MY_DIR}/proprietary-files-ir.txt" true
-echo "endif" >> "${PRODUCTMK}"
 
 # Finish
 write_footers

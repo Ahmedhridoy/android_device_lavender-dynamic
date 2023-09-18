@@ -9,7 +9,7 @@
 set -e
 
 
-export DEVICE=whyred
+export DEVICE=lavender
 export VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
@@ -80,7 +80,7 @@ function blob_fixup() {
 # Reinitialize the helper for device
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-extract "${MY_DIR}/proprietary-files-whyred.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+extract "${MY_DIR}/proprietary-files-lavender.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 extract "${MY_DIR}/proprietary-files-fm.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 extract "${MY_DIR}/proprietary-files-ir.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
