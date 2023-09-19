@@ -461,11 +461,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
-
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-    
+   
 # NotchBarKiller
 PRODUCT_PACKAGES += \
     NotchBarKiller
