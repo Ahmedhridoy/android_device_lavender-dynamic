@@ -20,7 +20,7 @@ import os
 import sys
 from hashlib import sha1
 
-DEVICE = 'whyred'
+DEVICE = 'lavender'
 VENDOR = 'xiaomi'
 VENDOR_PATH = os.path.join(
     *['..', '..', '..', 'vendor', VENDOR, DEVICE, 'proprietary'])
@@ -75,7 +75,7 @@ class Updater:
         self.write()
 
 
-for file in ['proprietary-files.txt', 'proprietary-files-whyred.txt', 'proprietary-files-fm.txt', 'proprietary-files-ir.txt']:
+for file in ['proprietary-files.txt']:
     updater = Updater(file)
     if len(sys.argv) == 2 and sys.argv[1] == '-c':
         updater.cleanup()
