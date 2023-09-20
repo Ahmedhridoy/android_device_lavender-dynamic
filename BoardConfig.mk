@@ -23,6 +23,7 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 # Platform
 BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := sdm660
+OVERRIDE_QCOM_HARDWARE_VARIANT := sdm660
 #TARGET_ENFORCES_QSSI := true
 
 # Creates metadata partition mount point under root for
