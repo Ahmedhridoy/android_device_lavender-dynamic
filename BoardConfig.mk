@@ -25,6 +25,7 @@ BOARD_VENDOR := xiaomi
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := sdm660
 OVERRIDE_QCOM_HARDWARE_VARIANT := sdm660
+QCOM_HARDWARE_VARIANT := sdm660
 
 # Creates metadata partition mount point under root for
 # the devices with metadata parition
