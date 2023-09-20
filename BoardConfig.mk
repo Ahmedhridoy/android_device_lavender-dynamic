@@ -69,6 +69,14 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
 TARGET_KERNEL_CONFIG := lavender_defconfig
 TARGET_KERNEL_VERSION := 4.19
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := clang-r450784d
+TARGET_CLANG_PREBUILTS_VERSION := clang-r450784d
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-r450784d
+
+# Platform
+TARGET_KERNEL_ADDITIONAL_FLAGS += \
+    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument" LLVM=1 LLVM_IAS=1
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
