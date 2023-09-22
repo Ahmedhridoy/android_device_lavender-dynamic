@@ -26,6 +26,18 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+# Rising OS Stuff with GApps
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_USE_PIXEL_FINGERPRINT := true
+#TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_ENABLE_BLUR := false
+TARGET_CORE_GMS := true
+WITH_GMS := true
+RISING_CHIPSET := SDM660
+# Maintainer Stuff
+RISING_MAINTAINER := Apex_Not_Legend
+RISING_BUILDTYPE := unofficial
 
 # Inherit from lavender device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
