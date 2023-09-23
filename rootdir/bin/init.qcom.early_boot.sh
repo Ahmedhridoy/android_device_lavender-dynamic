@@ -1,4 +1,4 @@
-#! /vendor/bin/sh
+#!/vendor/bin/sh
 
 # Copyright (c) 2012-2013,2016,2018,2019 The Linux Foundation. All rights reserved.
 #
@@ -348,14 +348,23 @@ case "$target" in
                     setprop vendor.media.target.version 1
                 fi
                 ;;
-    #Set property to differentiate SDM660 & SDM455
+    #Set property to differentiate SDM660, sdm636 & SDM455
     #SOC ID for SDM455 is 385
-    "sdm660")
+    "sdm660" | "sdm636")
         case "$soc_hwid" in
            385)
                setprop vendor.media.target.version 1
         esac
         ;;
+esac
+
+baseband=`getprop ro.baseband`
+#enable atfwd daemon all targets except sda, apq, qcs
+case "$baseband" in
+    "apq" | "sda" | "qcs" )
+        setprop persist.vendor.radio.atfwd.start false;;
+    *)
+        setprop persist.vendor.radio.atfwd.start true;;
 esac
 
 #set default lcd density
